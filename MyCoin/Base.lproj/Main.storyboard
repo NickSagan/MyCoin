@@ -48,7 +48,7 @@
                                 </constraints>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0w-3Y-5Hd">
-                                <rect key="frame" x="20" y="616" width="468" height="216"/>
+                                <rect key="frame" x="20" y="616" width="374" height="216"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyCoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avp-GX-b7H">
                                 <rect key="frame" x="121" y="64" width="172" height="62.5"/>
@@ -70,6 +70,11 @@
                             <constraint firstItem="5i3-mj-zwn" firstAttribute="top" secondItem="avp-GX-b7H" secondAttribute="bottom" constant="40" id="vd4-Xt-ub7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bitcoinLabel" destination="bI8-th-I0y" id="hlX-zt-Gg9"/>
+                        <outlet property="currencyLabel" destination="wU2-rj-klX" id="5NW-i2-SQL"/>
+                        <outlet property="currencyPicker" destination="w0w-3Y-5Hd" id="7ad-eg-bcG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +84,7 @@
     <resources>
         <image name="bitcoinsign.square.fill" catalog="system" width="128" height="114"/>
         <namedColor name="Background Color">
-            <color red="0.50588235294117645" green="0.80784313725490198" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.50599998235702515" green="0.80800002813339233" blue="0.92500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Icon Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
