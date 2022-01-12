@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var coinManager = CoinManager()
     
@@ -28,6 +28,7 @@ class ViewController: UIViewController, UIPickerViewDataSource {
         super.viewDidLoad()
         
         currencyPicker.dataSource = self
+        currencyPicker.delegate = self
     }
 
 
