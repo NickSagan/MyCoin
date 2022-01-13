@@ -7,7 +7,9 @@
 
 import Foundation
 
-
+protocol CoinManagerDelegate {
+    func didUpdateCoinPrice(coinPrice: Double)
+}
 
 class CoinManager {
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC/"
