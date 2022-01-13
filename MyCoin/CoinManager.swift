@@ -7,25 +7,28 @@
 
 import Foundation
 
+
+
 class CoinManager {
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC/"
     let apiKey = "8394335E-2E9A-44EB-94C7-9060C5287800"
     
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     
-    func getCoinPrice(for currency: String) -> String {
+    func getCoinPrice(for currency: String) {
         let urlString = baseURL + currency + "?apikey=" + apiKey
-        return performRequest(urlString: urlString)
+        performRequest(urlString: urlString)
     }
     
-    func performRequest(urlString: String) -> String {
+    func performRequest(urlString: String) {
         let url = URL(string: urlString)
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url!) { data, response, error in
             if error != nil {print(error!); return}
             guard let safeData = data else {return}
-            let value = self.parseJson(safeData)
-            return value
+            guard let coinPrice = self.parseJson(safeData) else {print("parseJSON failed"); return}
+            print("Parsed: \(coinPrice)")
+            self.delegate.didUpdateCoinPrice(coinPrice: coinPrice)
         }
         task.resume()
     }
