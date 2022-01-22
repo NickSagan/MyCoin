@@ -12,6 +12,7 @@ protocol CoinManagerDelegate {
 }
 
 class CoinManager {
+    var delegate: CoinManagerDelegate?
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/BTC/"
     let apiKey = "8394335E-2E9A-44EB-94C7-9060C5287800"
     

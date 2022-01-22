@@ -14,6 +14,7 @@
 		9149A7DB2789C8D30059EC06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9149A7DA2789C8D30059EC06 /* Assets.xcassets */; };
 		9149A7DE2789C8D30059EC06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9149A7DC2789C8D30059EC06 /* LaunchScreen.storyboard */; };
 		9149A7E6278DBD3B0059EC06 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9149A7E5278DBD3B0059EC06 /* CoinManager.swift */; };
+		91D8E6D8279C634A00816161 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D8E6D7279C634A00816161 /* CoinData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9149A7DD2789C8D30059EC06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9149A7DF2789C8D30059EC06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9149A7E5278DBD3B0059EC06 /* CoinManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		91D8E6D7279C634A00816161 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9149A7DA2789C8D30059EC06 /* Assets.xcassets */,
 				9149A7DC2789C8D30059EC06 /* LaunchScreen.storyboard */,
 				9149A7DF2789C8D30059EC06 /* Info.plist */,
+				91D8E6D7279C634A00816161 /* CoinData.swift */,
 			);
 			path = MyCoin;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				9149A7E6278DBD3B0059EC06 /* CoinManager.swift in Sources */,
 				9149A7D62789C8D00059EC06 /* ViewController.swift in Sources */,
+				91D8E6D8279C634A00816161 /* CoinData.swift in Sources */,
 				9149A7D22789C8D00059EC06 /* AppDelegate.swift in Sources */,
 				9149A7D42789C8D00059EC06 /* SceneDelegate.swift in Sources */,
 			);
