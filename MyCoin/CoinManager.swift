@@ -23,20 +23,36 @@ class CoinManager {
         performRequest(urlString: urlString)
     }
     
-    func performRequest(urlString: String) {
-        let url = URL(string: urlString)
-        let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: url!) { data, response, error in
-            if error != nil {print(error!); return}
-            guard let safeData = data else {return}
-            guard let coinPrice = self.parseJson(safeData) else {print("parseJSON failed"); return}
-            print("Parsed: \(coinPrice)")
-            self.delegate.didUpdateCoinPrice(coinPrice: coinPrice)
+    func performRequest(urlString: String){
+        // 1. Create a URL
+        if let url = URL(string: urlString){
+            // 2. Create a URL session (it's like a browser)
+            let urlSession = URLSession(configuration: .default)
+            // 3. give the session a task (it's like inputing url in a browser)
+            let task = urlSession.dataTask(with: url) { data, response, error in
+                
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                
+                if let safeData = data {
+                    if let coinPrice = self.parseJSON(coinData: safeData){
+                        print("Parsed: \(coinPrice)")
+                        self.delegate?.didUpdateCoinPrice(coinPrice: coinPrice)
+                    }
+                    else{
+                        print("parseJSON error")
+                        return
+                    }
+                }
+            }
+            // 4. Start a task. It's like pushing the Enter
+            task.resume()
         }
-        task.resume()
     }
     
-    func parseJSON (coinData: Data) -> Double? {
+    func parseJSON(coinData: Data) -> Double? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(CoinData.self, from: coinData)
