@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var coinManager = CoinManager()
-
+    
     @IBOutlet weak var currencyPicker: UIPickerView!
     @IBOutlet weak var bitcoinLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
@@ -56,4 +56,4 @@ extension ViewController: CoinManagerDelegate {
     func didFailWithError (error: Error){
         print(error)
     }
-     }
+}

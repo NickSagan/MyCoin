@@ -60,17 +60,49 @@
 		9149A7D02789C8CF0059EC06 /* MyCoin */ = {
 			isa = PBXGroup;
 			children = (
-				9149A7D12789C8D00059EC06 /* AppDelegate.swift */,
-				9149A7D32789C8D00059EC06 /* SceneDelegate.swift */,
-				9149A7E5278DBD3B0059EC06 /* CoinManager.swift */,
-				9149A7D52789C8D00059EC06 /* ViewController.swift */,
-				9149A7D72789C8D00059EC06 /* Main.storyboard */,
+				91D8E6DB279D771100816161 /* Model */,
+				91D8E6DA279D770B00816161 /* View */,
+				91D8E6D9279D770500816161 /* Controller */,
+				91D8E6DC279D773900816161 /* Supporting files */,
 				9149A7DA2789C8D30059EC06 /* Assets.xcassets */,
-				9149A7DC2789C8D30059EC06 /* LaunchScreen.storyboard */,
 				9149A7DF2789C8D30059EC06 /* Info.plist */,
-				91D8E6D7279C634A00816161 /* CoinData.swift */,
 			);
 			path = MyCoin;
+			sourceTree = "<group>";
+		};
+		91D8E6D9279D770500816161 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9149A7D52789C8D00059EC06 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		91D8E6DA279D770B00816161 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9149A7D72789C8D00059EC06 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91D8E6DB279D771100816161 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9149A7E5278DBD3B0059EC06 /* CoinManager.swift */,
+				91D8E6D7279C634A00816161 /* CoinData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91D8E6DC279D773900816161 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				9149A7D12789C8D00059EC06 /* AppDelegate.swift */,
+				9149A7D32789C8D00059EC06 /* SceneDelegate.swift */,
+				9149A7DC2789C8D30059EC06 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
