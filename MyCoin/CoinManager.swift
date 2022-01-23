@@ -36,7 +36,15 @@ class CoinManager {
         task.resume()
     }
     
-    func parseJson(_ data: Data) -> String {
-        
+    func parseJSON (coinData: Data) -> Double? {
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(CoinData.self, from: coinData)
+            return decodedData.rate
+        }
+        catch {
+            print(error)
+            return nil
+        }
     }
 }
