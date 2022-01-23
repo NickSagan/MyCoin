@@ -1,7 +1,7 @@
 # MyCoin
 I made this Bitcoin app to practice fetching data from coinapi.io API and JSON decoding
 
-![Weather App](https://github.com/NickSagan/Weather/blob/b64ac0306f9411f37a2573540e2cff722763a2ec/2.jpg?raw=true)
+![MyCoin](https://raw.githubusercontent.com/NickSagan/MyCoin/main/1212.jpg?raw=true)
 
 # This project contains
 
